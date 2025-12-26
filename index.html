@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Student Performance Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<body>
+
+<div class="container">
+    <h1>Student Grade Checker</h1>
+
+    <div class="input-box">
+        <input type="text" id="name" placeholder="Enter Student Name">
+        <input type="number" id="marks" placeholder="Enter Marks (0-100)">
+        <button onclick="addStudent()">Check Grade</button>
+        <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+    </div>
+
+    <div id="result"></div>
+
+    <!-- Statistics -->
+     
+    <div class="stats">
+        <p>Total Students: <span id="total">0</span></p>
+        <p>Class Average: <span id="average">0</span></p>
+        <p>Highest Marks: <span id="highest">0</span></p>
+    </div>
+    <!-- Chart-->
+     <div class="chart-box">
+    <canvas id="gradeChart"></canvas>
+    </div>
+
+
+    <h2>Student Records</h2>
+    <input type="text" id="search" placeholder="Search by name" onkeyup="searchStudent()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Grade</th>
+                <th>Progress</th>
+                <th>Performance</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <button class="export-btn" onclick="exportCSV()">⬇ Export CSV</button>
+    <button onclick="exportPDF()">📄 Export PDF</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("SGC.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+
+.dark {
+    background-image: url("SGC.jpg");
+    filter: brightness(0.85);
+}
+
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: blue;
+}
+
+.export-btn {
+    margin-top: 10px;
+    background: #2196F3;
+}
+
+#result {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    font-weight: bold;
+}
+.chart-box {
+    width: 70%;
+    margin: 30px auto;
+}
+
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.dark table, .dark th, .dark td {
+    border-color: #555;
+}
+
+/* Rank Topper */
+.topper {
+    background: #fff3cd;
+    font-weight: bold;
+}
+
+/* Grade Colors */
+.Aplus { color: green; font-weight: bold; }
+.A { color: #2e8b57; }
+.B { color: orange; }
+.C { color: brown; }
+.F { color: red; font-weight: bold; }
+
+/* Progress Bar */
+.progress {
+    background: #ddd;
+    height: 12px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; }
+}
